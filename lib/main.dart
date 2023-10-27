@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tourism/pages/navpages/homepage.dart';
 import 'package:tourism/pages/navpages/main_page.dart';
-import 'package:tourism/pages/welcome_page.dart';
 
 void main() {
   runApp(const MyApp());
