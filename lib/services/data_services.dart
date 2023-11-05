@@ -12,6 +12,7 @@ class DataServices{
     try{
       if(res.statusCode==200){
         List<dynamic> list= json.decode(res.body);
+        print(list);
         return list.map((e) => DataModel.fromJson(e)).toList();
       }
       else{
@@ -20,8 +21,9 @@ class DataServices{
     }
     catch(e){
       print(e);
+       return <DataModel>[];
     }
-    return <DataModel>[];
+   
   }
 
 }
