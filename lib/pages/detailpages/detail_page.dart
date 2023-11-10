@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tourism/cubit/app_cubits.dart';
 import 'package:tourism/cubit/app_cubitstates.dart';
 import 'package:tourism/misc/colors.dart';
+import 'package:tourism/pages/detailpages/cubit/store_pageinfo_cubit.dart';
 import 'package:tourism/widgets/appButtons.dart';
 import 'package:tourism/widgets/app_largetext.dart';
 import 'package:tourism/widgets/app_text.dart';
@@ -116,6 +117,7 @@ class _DetailPageState extends State<DetailPage> {
                           List.generate(5, (index) {
                             return InkWell(
                               onTap: (){
+                                BlocProvider.of<StorePageInfoCubits>(context).addPageInfo(detail.place.name,index);
                                 setState(() {
                                    selectedindex=index;
                                 });

@@ -5,8 +5,11 @@ class StorePageInfoCubits extends Cubit <List<StorePageInfoState>>{
   StorePageInfoCubits():super([]);
   
   addPageInfo(String? name,int? index){
+    var list=state;
+    print('my length is ${list.length}');
     emit([StorePageInfoState(index: index,name: name),...state]);
+      print('my length is ${list.length}');
   }
 
-  
+
 }
